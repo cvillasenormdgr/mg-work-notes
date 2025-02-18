@@ -1,0 +1,14 @@
+- ep-acn-website      Gatsby    [Cloned]          POC: KM
+- ep-stl-website      Gatsby    [Cloned]          POC: RU
+- ep-mg-website       Gatsby
+- ep-mxc-website      Gatsby    [Cloned]          POC: RU
+- ep-vts-website      Gatsby    [Cloned]:[Done]   POC: AK
+- pp-jn-website       Gatsby    [Cloned]:[Done]   POC: VE
+- pp-jn-website-v2    NextJS    [Cloned]:[Done]   POC: JJ
+- pp-ns-website       Gatsby    [Cloned]:[Done]   POC: JJ
+- mh-tl-website       Gatsby    [Cloned]          POC: RD
+- mh-xa-website       NextJS    [Cloned]          POC: RD
+- mg-heart-website    NextJS    [Cloned]:[Done]   POC: JJ
+- mgx-aimer-website   NextJS    [Cloned]          POC: AA
+- th-mrg-website      NextJS    [Cloned]:[Done]   POC: MF
+- ph-bl-website       Gatsby    [Cloned]:[Done]   POC: AA
