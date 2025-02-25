@@ -1,4 +1,4 @@
-- acn-website         NextJS    [Cloned]          POC: RU
+- acn-website         NextJS    [Cloned]:[Done]   POC: RU
 - ep-stl-website      Gatsby    [Cloned]:[Done]   POC: RU
 - ep-mg-website       Gatsby    [Cloned]:[Done]   POC: RU
 - ep-mxc-website      Gatsby    [Cloned]:[Done]   POC: RU
@@ -7,8 +7,8 @@
 - pp-jn-website-v2    NextJS    [Cloned]:[Done]   POC: JJ
 - pp-ns-website       Gatsby    [Cloned]:[Done]   POC: JJ
 - mh-tl-website       Gatsby    [Cloned]:[Done]   POC: RD
-- mh-xa-website       NextJS    [Cloned]          POC: RD
+- mh-xa-website       NextJS    [Cloned]:[Done]   POC: RD
 - mg-heart-website    NextJS    [Cloned]:[Done]   POC: JJ
-- mgx-aimer-website   NextJS    [Cloned]          POC: AA
+- mgx-aimer-website   NextJS    [Cloned]:[Done]   POC: AA
 - th-mrg-website      NextJS    [Cloned]:[Done]   POC: MF
 - ph-bl-website       Gatsby    [Cloned]:[Done]   POC: AA
