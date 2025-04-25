@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World! This should run on main only"
+          command: "echo Hello, World! This should not run!"
 workflows:
   say-hellos-workflow:
     jobs:
