@@ -18,7 +18,7 @@ def generate_eod_filenames(start_date=None):
 
     return filenames
 
-folder_path = "EOD/07July/Week 4/"
+folder_path = "EOD/08August/Week 1/"
 
 os.makedirs(folder_path, exist_ok=True)
 
