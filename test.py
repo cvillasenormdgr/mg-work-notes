@@ -1,6 +1,5 @@
 import requests
 from urllib.parse import urlencode
-import json
 from collections import defaultdict
 
 # Your Make webhook URL (configured to accept GET requests)
