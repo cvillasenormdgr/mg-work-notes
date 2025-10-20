@@ -1,39 +1,44 @@
 import requests
-from urllib.parse import urlencode
 from collections import defaultdict
 
 # Your Make webhook URL (configured to accept GET requests)
 webhook_url = "https://hook.eu2.make.com/iyz8vmkeij3i689468wy0afnmw87gd6s"
 
-# Send simple GET request
 response = requests.get(webhook_url)
-
 
 if response.status_code == 200:
     events = response.json()
-    grouped = defaultdict(list)
+
+    # Nested dict: {prefix: {subgroup: [items]}}
+    grouped = defaultdict(lambda: defaultdict(list))
 
     for event in events:
-        summary = event['summary']
-        if ':' in summary:
-            # Split on the first colon only
-            prefix, rest = summary.split(':', 1)
-            grouped[prefix.strip()].append(rest.strip())
-        else:
-            grouped[summary].append(None)  # No sub-item
+        summary = event['summary'].strip()
 
-    markdown_lines = []
-    for category, items in grouped.items():
-        if all(item is None for item in items):
-            # Just a standalone event
-            markdown_lines.append(f"- {category}")
+        # Step 1: check if it starts with "XX-YY:"
+        if "-" in summary and ":" in summary:
+            prefix_part, rest = summary.split("-", 1)   # split WN-TL -> WN , TL: ...
+            subgroup_part, *remaining = rest.split(":", 1)  # split TL: Task -> TL , Task
+            prefix = prefix_part.strip()
+            subgroup = subgroup_part.strip()
+            item = remaining[0].strip() if remaining else None
+            grouped[prefix][subgroup].append(item)
+
         else:
-            markdown_lines.append(f"- {category}:")
+            # Fallback for events without this pattern
+            grouped["Misc"][summary].append(None)
+
+    # Now build markdown
+    markdown_lines = []
+    for prefix, subgroups in grouped.items():
+        markdown_lines.append(f"- {prefix}:")
+        for subgroup, items in subgroups.items():
+            markdown_lines.append(f"    - {subgroup}:")
             for item in items:
                 if item:
-                    markdown_lines.append(f"    - {item}")
+                    markdown_lines.append(f"        - {item}")
 
-    markdown = '\n'.join(markdown_lines)
+    markdown = "\n".join(markdown_lines)
     print(f"Events:\n{markdown}")
 
 else:
