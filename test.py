@@ -33,10 +33,10 @@ if response.status_code == 200:
     for prefix, subgroups in grouped.items():
         markdown_lines.append(f"- {prefix}:")
         for subgroup, items in subgroups.items():
-            markdown_lines.append(f"    - {subgroup}:")
+            markdown_lines.append(f"  - {subgroup}:")
             for item in items:
                 if item:
-                    markdown_lines.append(f"        - {item}")
+                    markdown_lines.append(f"    - {item}")
 
     markdown = "\n".join(markdown_lines)
     print(f"Events:\n{markdown}")
