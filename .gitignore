@@ -1,0 +1,5 @@
+# .gitignore
+# Ignore node modules
+node_modules/
+# Ignore these files
+keyfile.json
