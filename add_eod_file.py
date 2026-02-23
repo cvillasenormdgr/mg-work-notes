@@ -1,6 +1,5 @@
 import os
 from datetime import datetime, timedelta
-import calendar
 
 def generate_eod_filenames(start_date=None):
     if not start_date:
