@@ -47,7 +47,7 @@ folder_path = f"EOD/{today.strftime('%m')}{month_name}/Week {week_number}/"
 os.makedirs(folder_path, exist_ok=True)
 
 filenames = generate_eod_filenames(today)
-content = "## Support Needed (3Ds):\n## Done:\n## To do:\n## Google Tasks:\n"
+content = "## Support Needed (3Ds):\n## Done:\n## To do:\n## Google/Asana Tasks:\n"
 
 for name in filenames:
     file_path = os.path.join(folder_path, name)
